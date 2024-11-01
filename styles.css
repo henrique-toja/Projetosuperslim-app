@@ -7,8 +7,8 @@
     --font-size-button: 18px; /* Tamanho da fonte dos botões */
     --font-size-h3: 24px;    /* Tamanho da fonte dos h3 */
     --font-family-body: 'Open Sans', 'Noto Sans', 'Helvetica Neue', sans-serif; /* Fonte padrão do corpo do texto */
-    --font-family-h3: 'Playfair Display', 'Georgia', serif;                     /* Fonte padrão para h3 */
-    --font-family-button: 'Roboto', 'Segoe UI', sans-serif;                     /* Fonte padrão para botões */
+    --font-family-h3: 'Playfair Display', 'Georgia', serif; /* Fonte padrão para h3 */
+    --font-family-button: 'Roboto', 'Segoe UI', sans-serif; /* Fonte padrão para botões */
 }
 
 /* Estilos globais */
@@ -20,8 +20,8 @@
 
 body {
     font-family: var(--font-family-body);
-    background: url('assets/background.jpg') no-repeat center center fixed; /* Adiciona a imagem de fundo */
-    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background: url('assets/background.jpg') no-repeat center center fixed; 
+    background-size: cover; 
     color: var(--color-green);
     font-size: var(--font-size-body);
     line-height: 1.6;
@@ -30,38 +30,62 @@ body {
 
 /* Estilo do cabeçalho */
 header {
-    background-color: var(--color-purple); /* Cor de fundo roxa */
-    padding: 20px; /* Espaçamento interno */
-    text-align: center; /* Centraliza o conteúdo */
-}
-
-header .header-container {
-    display: flex;
-    justify-content: center; /* Centraliza os botões no cabeçalho */
-    gap: 10px; /* Espaço entre os botões */
+    background-color: var(--color-purple); 
+    padding: 20px; 
+    text-align: center; 
 }
 
 header h1 {
-    color: var(--color-white); /* Título em branco */
+    color: var(--color-white); 
     font-size: var(--font-size-h3);
     margin-bottom: 15px;
 }
 
 /* Estilos dos botões do cabeçalho */
 header .btn-header {
-    padding: 12px 24px; /* Espaçamento interno do botão */
+    padding: 12px 24px; 
     border: none;
     border-radius: 5px;
     font-size: var(--font-size-button);
     cursor: pointer;
     color: var(--color-white);
-    background-color: var(--color-green); /* Cor do botão padrão */
+    background-color: var(--color-green); 
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 header .btn-header:hover {
-    background-color: var(--color-purple); /* Muda para roxo ao passar o mouse */
-    transform: scale(1.05); /* Animação de aumento */
+    background-color: var(--color-purple); 
+    transform: scale(1.05); 
+}
+
+/* Container para organização dos botões */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px; 
+    padding: 20px 0;
+}
+
+/* Estilo de botões de autenticação */
+.btn-auth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background: var(--color-white);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100%; 
+}
+
+.btn-auth:hover {
+    background-color: #e6e6e6; 
+    transform: scale(1.05); 
 }
 
 /* Seção padrão */
@@ -69,7 +93,7 @@ section {
     margin: 20px 0;
     padding: 20px;
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.75); /* Fundo branco com transparência */
+    background: rgba(255, 255, 255, 0.75); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     text-align: center;
@@ -77,24 +101,6 @@ section {
 
 section:hover {
     transform: translateY(-10px);
-}
-
-/* Seção informativa */
-.info {
-    background: #fff;
-    padding: 30px;
-    text-align: left; /* Texto alinhado à esquerda */
-    line-height: 1.8;
-    box-shadow: none; /* Remove a sombra */
-}
-
-.info h3 {
-    font-size: var(--font-size-h3);
-    color: var(--color-purple); /* Roxo para títulos */
-}
-
-.info p {
-    color: var(--color-green); /* Verde para textos */
 }
 
 /* Estilo de artigos */
@@ -116,24 +122,11 @@ article p {
     color: var(--color-purple);
 }
 
-/* Estilo de texto seções */
-section h3 {
-    font-size: var(--font-size-h3);
-    color: var(--color-green);
-    font-family: var(--font-family-h3);
-    font-weight: bold;
-}
-
-section p {
-    font-size: var(--font-size-body);
-    color: var(--color-purple);
-}
-
 /* Rodapé */
 footer {
     text-align: center;
     padding: 20px;
-    background: var(--color-green); /* Cor do footer verde suavizado */
+    background: var(--color-green); 
     color: var(--color-white);
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -174,35 +167,16 @@ button {
 }
 
 button:hover {
-    transform: scale(1.05); /* Animação de aumento */
+    transform: scale(1.05); 
 }
 
-/* Container para organização dos botões */
-.btn-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-direction: column;
-    padding: 20px 0;
+/* Estilo para animação de fade */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
 }
 
-/* Estilo de botões de autenticação */
-.btn-auth {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 24px;
-    background: var(--color-white);
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #000;
-    text-decoration: none;
-    transition: background-color 0.3s, transform 0.3s;
-    width: 100%; /* Para ocupar o espaço completo */
-}
-
-.btn-auth:hover {
-    background-color: #e6e6e6; /* Muda a cor de fundo ao passar o mouse */
-    transform: scale(1.05); /* Animação de aumento */
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
 }

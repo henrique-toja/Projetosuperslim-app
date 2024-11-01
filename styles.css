@@ -34,6 +34,12 @@ header {
     text-align: center; /* Centraliza o conteúdo */
 }
 
+header .header-container {
+    display: flex;
+    justify-content: center; /* Centraliza os botões no cabeçalho */
+    gap: 10px; /* Espaço entre os botões */
+}
+
 header h1 {
     color: var(--color-white); /* Título em branco */
     font-size: var(--font-size-h3);
@@ -42,10 +48,7 @@ header h1 {
 
 /* Estilos dos botões do cabeçalho */
 header .btn-header {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: 12px 24px;
+    padding: 12px 24px; /* Espaçamento interno do botão */
     border: none;
     border-radius: 5px;
     font-size: var(--font-size-button);
@@ -53,7 +56,6 @@ header .btn-header {
     color: var(--color-white);
     background-color: var(--color-green); /* Cor do botão padrão */
     transition: background-color 0.3s ease, transform 0.3s ease;
-    margin: 0 10px; /* Margem entre os botões */
 }
 
 header .btn-header:hover {
@@ -200,71 +202,4 @@ button:hover {
 }
 
 .btn-auth:hover {
-    background-color: #e6e6e6; /* Cor ao passar o mouse */
-    transform: scale(1.02);
-}
-
-.btn-auth .btn-icon {
-    display: flex;
-    align-items: center;
-    margin-right: 12px; /* Espaçamento entre ícone e texto */
-}
-
-.btn-auth .btn-icon svg {
-    width: 24px;
-    height: 24px;
-}
-
-.btn-auth span {
-    font-family: Arial, sans-serif;
-}
-
-/* Centralizar conteúdo geral */
-section {
-    flex: 1; /* Permite ocupar o espaço disponível */
-}
-
-/* Estilo do container dos botões de autenticação */
-.btn-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-}
-
-/* Estilo específico dos botões de autenticação */
-.btn-auth button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 24px;
-    background-color: #0070c9; /* Cor padrão do botão */
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    width: 100%; /* Para ocupar o espaço completo */
-}
-
-.btn-auth button:hover {
-    background-color: #005ea7; /* Cor ao passar o mouse */
-    transform: scale(1.02);
-}
-
-.btn-auth img {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-}
-
-.fade-out {
-    opacity: 0;
-    transition: opacity 0.5s ease-out;
-}
-
-.fade-in {
-    opacity: 1;
-    transition: opacity 0.5s ease-in;
-}
+    background-color: #e6e6e6

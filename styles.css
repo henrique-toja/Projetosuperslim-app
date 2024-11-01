@@ -1,0 +1,277 @@
+/* Definições de variáveis globais */
+:root {
+    --color-purple: #820ad1; /* Roxo */
+    --color-green: #6aa84f;  /* Verde suavizado */
+    --color-white: #ffffff; /* Cor branca */
+    --font-size-body: 18px;  /* Tamanho padrão do corpo do texto */
+    --font-size-button: 18px; /* Tamanho da fonte dos botões */
+    --font-size-h3: 24px;    /* Tamanho da fonte dos h3 */
+    --font-family-body: 'Open Sans', 'Noto Sans', 'Helvetica Neue', sans-serif; /* Fonte padrão do corpo do texto */
+    --font-family-h3: 'Playfair Display', 'Georgia', serif;                     /* Fonte padrão para h3 */
+    --font-family-button: 'Roboto', 'Segoe UI', sans-serif;                     /* Fonte padrão para botões */
+}
+
+/* Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-body); /* Fonte padrão */
+    background-color: #f1f3f4; /* Tom mais claro */
+    color: var(--color-green); /* Cor padrão para o texto */
+    font-size: var(--font-size-body); /* Tamanho padrão da fonte */
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    background-image: url('./assets/background.jpg'); /* Caminho para a imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+}
+
+/* Estilo do cabeçalho */
+header {
+    position: relative;
+    height: 300px; /* Defina a altura do cabeçalho conforme necessário */
+    background: url('assets/header.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Cor branca com 20% de opacidade */
+    z-index: 1; /* Camada acima da imagem */
+}
+
+/* Seção padrão */
+section {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.75); /* Fundo branco com transparência */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+section:hover {
+    transform: translateY(-10px);
+}
+
+/* Seção informativa */
+.info {
+    background: #fff;
+    padding: 30px;
+    text-align: left; /* Texto alinhado à esquerda */
+    line-height: 1.8;
+    box-shadow: none; /* Remove a sombra */
+}
+
+.info h3 {
+    font-size: var(--font-size-h3);
+    color: var(--color-purple); /* Roxo para títulos */
+}
+
+.info p {
+    color: var(--color-green); /* Verde para textos */
+}
+
+/* Estilo de artigos */
+article {
+    padding: 20px;
+    background: var(--color-white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+article h3 {
+    font-size: var(--font-size-h3);
+    color: var(--color-green);
+    font-family: var(--font-family-h3);
+    font-weight: bold;
+}
+
+article p {
+    font-size: var(--font-size-body);
+    color: var(--color-purple);
+}
+
+/* Estilo de texto seções*/
+
+section h3 {
+    font-size: var(--font-size-h3);
+    color: var(--color-green);
+    font-family: var(--font-family-h3);
+    font-weight: bold;
+}
+
+section p {
+    font-size: var(--font-size-body);
+    color: var(--color-purple);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--color-purple);
+    color: var(--color-white);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: auto; /* Posiciona no final */
+}
+
+footer p {
+    margin: 0;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer nav ul li a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+/* Estilos de botões */
+button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: var(--font-size-body);
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: var(--color-white);
+    font-family: var(--font-family-button);
+}
+
+button:hover {
+    transform: scale(1.05); /* Animação de aumento */
+}
+
+/* Botões personalizados */
+.btn-next {
+    background-color: var(--color-purple);
+}
+
+.btn-know {
+    background-color: var(--color-green);
+}
+
+.btn-next:hover, .btn-next:focus {
+    background-color: var(--color-green); /* Verde ao passar o mouse */
+}
+
+.btn-know:hover, .btn-know:focus {
+    background-color: var(--color-purple); /* Roxo ao passar o mouse */
+}
+
+/* Container para organização dos botões */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+/* Estilo de botões de autenticação */
+.btn-auth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background: var(--color-white);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100%; /* Para ocupar o espaço completo */
+}
+
+.btn-auth:hover {
+    background-color: #e6e6e6; /* Cor ao passar o mouse */
+    transform: scale(1.02);
+}
+
+.btn-auth .btn-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 12px; /* Espaçamento entre ícone e texto */
+}
+
+.btn-auth .btn-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.btn-auth span {
+    font-family: Arial, sans-serif;
+}
+
+/* Centralizar conteúdo geral */
+section {
+    flex: 1; /* Permite ocupar o espaço disponível */
+}
+
+/* Estilo do container dos botões de autenticação */
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Estilo específico dos botões de autenticação */
+.btn-auth button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background-color: #0070c9; /* Cor padrão do botão */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100%; /* Para ocupar o espaço completo */
+}
+
+.btn-auth button:hover {
+    background-color: #005ea7; /* Cor ao passar o mouse */
+    transform: scale(1.02);
+}
+
+.btn-auth img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}

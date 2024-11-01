@@ -7,7 +7,7 @@
     <!-- Botão de login com Google -->
     <button class="btn-auth" id="google-login">
         <div class="btn-icon">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
                 <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path>
                 <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path>
                 <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path>
@@ -34,7 +34,7 @@
     <!-- Botão de login com Apple -->
     <button class="btn-auth" id="apple-login">
         <div class="btn-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 16" class="icon" fill="currentColor" style="width: 24px; height: 24px; margin-right: 10px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 16" class="icon" fill="currentColor">
                 <path d="M13.5 12.4c-.3.7-.9 1.4-1.4 1.9-.4.4-.9.8-1.4 1-.4.1-.8.2-1.3.2-.5 0-.9-.1-1.3-.2-.4-.1-.9-.3-1.4-.3-.5 0-1 .2-1.4.3-.4.1-.9.2-1.3.2-.4 0-.9-.1-1.3-.2-.5-.2-.9-.6-1.4-1-.5-.5-1.1-1.2-1.4-1.9-.3-.7-.5-1.4-.5-2.1 0-.6.1-1.2.4-1.7.3-.5.7-1.1 1.3-1.4.5-.3 1.1-.5 1.7-.5.4 0 .8.1 1.3.3.4.2.8.3 1.3.3.4 0 .8-.1 1.3-.3.4-.2.8-.3 1.3-.3.6 0 1.2.1 1.7.5.5.3 1 .8 1.3 1.4.2.5.4 1.1.4 1.7 0 .7-.2 1.4-.5 2.1zm-4.7-9.7c-.1.4-.2.7-.4 1-.2.3-.5.6-.8.9-.3.2-.7.5-1 .6s-.8.2-1.3.2c-.1-.4 0-.8.1-1.2.1-.3.3-.7.6-.9.2-.3.5-.5.8-.6.3-.2.7-.2 1.1-.2.1.4.1.8.1 1.2zm0 0"></path>
             </svg>
         </div>
@@ -44,18 +44,14 @@
 
 <script>
     document.getElementById('google-login').addEventListener('click', function() {
-        // Inicie o fluxo de autenticação do Google aqui
-        // Exemplo de URL de redirecionamento para Auth0
         window.location.href = 'https://YOUR_AUTH0_DOMAIN/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=token&scope=openid profile email';
     });
 
     document.getElementById('microsoft-login').addEventListener('click', function() {
-        // Inicie o fluxo de autenticação do Microsoft aqui
         window.location.href = 'https://YOUR_AUTH0_DOMAIN/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=token&scope=openid profile email';
     });
 
     document.getElementById('apple-login').addEventListener('click', function() {
-        // Inicie o fluxo de autenticação do Apple aqui
         window.location.href = 'https://YOUR_AUTH0_DOMAIN/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=token&scope=openid profile email';
     });
 </script>

@@ -20,7 +20,7 @@
 
 body {
     font-family: var(--font-family-body);
-    background: url('background.jpg') no-repeat center center fixed; /* Adiciona a imagem de fundo */
+    background: url('assets/background.jpg') no-repeat center center fixed; /* Adiciona a imagem de fundo */
     background-size: cover; /* Faz a imagem cobrir todo o fundo */
     color: var(--color-green);
     font-size: var(--font-size-body);

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Super Slim - Área do Usuário</title>
+    <link rel="icon" href="assets/icon.ico" type="image/x-icon">
+    <meta property="og:title" content="Projeto Super Slim" />
+    <meta property="og:description" content="Transforme o emagrecimento em uma experiência leve e agradável com o Projeto Super Slim. Junte-se à nossa comunidade e atinja seus objetivos de forma saudável!" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/henrique-toja/Projetosuperslim/refs/heads/main/assets/tag.jpg" />
+    <meta property="og:url" content="https://www.projetosuperslim.fitness" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <a href="https://www.google.com" class="btn-profile">Perfil</a> <!-- Botão de perfil -->
+        <a href="#" class="btn-logout" onclick="logout()">Logout</a> <!-- Botão de logout -->
+    </div>
+</header>
+
+<div id="content-placeholder"></div> <!-- Content-placeholder para conteúdo dinâmico -->
+
+<footer>
+    <nav class="footer-nav">
+        <ul>
+            <li><a href="https://www.google.com">Psicologia</a></li>
+            <li><a href="https://www.google.com">Nutrição</a></li>
+            <li><a href="https://www.google.com">Exercícios</a></li>
+            <li><a href="https://www.google.com">Suplementos</a></li>
+            <li><a href="https://www.google.com">Comunicação</a></li>
+        </ul>
+    </nav>
+    <p>Projeto Super Slim © 2024 - Todos os direitos reservados</p>
+</footer>
+
+<script src="main.js"></script>
+<script>
+    function logout() {
+        // Remova o token de autenticação para simular o logout
+        localStorage.removeItem('authToken');
+        window.location.href = 'https://www.projetosuperslim.fitness'; // Redireciona para a página inicial
+    }
+</script>
+
+</body>
+</html>

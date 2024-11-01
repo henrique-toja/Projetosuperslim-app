@@ -19,10 +19,11 @@
 }
 
 body {
-    font-family: var(--font-family-body); /* Fonte padrão */
-    background-color: #f1f3f4; /* Tom mais claro */
-    color: var(--color-green); /* Cor padrão para o texto */
-    font-size: var(--font-size-body); /* Tamanho padrão da fonte */
+    font-family: var(--font-family-body);
+    background: url('background.jpg') no-repeat center center fixed; /* Adiciona a imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    color: var(--color-green);
+    font-size: var(--font-size-body);
     line-height: 1.6;
     scroll-behavior: smooth;
 }
@@ -202,4 +203,6 @@ button:hover {
 }
 
 .btn-auth:hover {
-    background-color: #e6e6e6
+    background-color: #e6e6e6; /* Muda a cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Animação de aumento */
+}

@@ -25,28 +25,40 @@ body {
     font-size: var(--font-size-body); /* Tamanho padrão da fonte */
     line-height: 1.6;
     scroll-behavior: smooth;
-    background-image: url('./assets/background.jpg'); /* Caminho para a imagem de fundo */
-    background-size: cover; /* Faz a imagem cobrir todo o fundo */
-    background-position: center; /* Centraliza a imagem */
 }
 
 /* Estilo do cabeçalho */
 header {
-    position: relative;
-    height: 300px; /* Defina a altura do cabeçalho conforme necessário */
-    background: url('assets/header.jpg') no-repeat center center;
-    background-size: cover;
+    background-color: var(--color-purple); /* Cor de fundo roxa */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o conteúdo */
 }
 
-header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2); /* Cor branca com 20% de opacidade */
-    z-index: 1; /* Camada acima da imagem */
+header h1 {
+    color: var(--color-white); /* Título em branco */
+    font-size: var(--font-size-h3);
+    margin-bottom: 15px;
+}
+
+/* Estilos dos botões do cabeçalho */
+header .btn-header {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: var(--font-size-button);
+    cursor: pointer;
+    color: var(--color-white);
+    background-color: var(--color-green); /* Cor do botão padrão */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 0 10px; /* Margem entre os botões */
+}
+
+header .btn-header:hover {
+    background-color: var(--color-purple); /* Muda para roxo ao passar o mouse */
+    transform: scale(1.05); /* Animação de aumento */
 }
 
 /* Seção padrão */
@@ -101,8 +113,7 @@ article p {
     color: var(--color-purple);
 }
 
-/* Estilo de texto seções*/
-
+/* Estilo de texto seções */
 section h3 {
     font-size: var(--font-size-h3);
     color: var(--color-green);
@@ -119,10 +130,9 @@ section p {
 footer {
     text-align: center;
     padding: 20px;
-    background: var(--color-purple);
+    background: var(--color-green); /* Cor do footer verde suavizado */
     color: var(--color-white);
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: auto; /* Posiciona no final */
 }
 
 footer p {
@@ -162,23 +172,6 @@ button {
 
 button:hover {
     transform: scale(1.05); /* Animação de aumento */
-}
-
-/* Botões personalizados */
-.btn-next {
-    background-color: var(--color-purple);
-}
-
-.btn-know {
-    background-color: var(--color-green);
-}
-
-.btn-next:hover, .btn-next:focus {
-    background-color: var(--color-green); /* Verde ao passar o mouse */
-}
-
-.btn-know:hover, .btn-know:focus {
-    background-color: var(--color-purple); /* Roxo ao passar o mouse */
 }
 
 /* Container para organização dos botões */

@@ -1,0 +1,132 @@
+/* Centraliza o main com flexbox */
+.chat-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - var(--header-height) - var(--footer-height));
+    padding: var(--header-height) 0 var(--footer-height);
+    background: inherit;
+    overflow: hidden; /* Evita rolagem externa */
+}
+
+/* Chat Container */
+.chat-container {
+    width: 100%;
+    max-width: 600px; /* Largura máxima do chat */
+    height: 70vh; /* Tamanho fixo do container */
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Garante que o conteúdo não extrapole o container */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+}
+
+/* Chat Header */
+.chat-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: linear-gradient(135deg, var(--color-purple), #6a0dad);
+    color: white;
+    gap: 10px;
+}
+
+.chat-header img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.chat-header h2 {
+    flex: 1;
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Chat Messages */
+.chat-messages {
+    flex: 1;
+    overflow-y: auto; /* Permite rolagem interna */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* As mensagens serão dimensionadas conforme o tamanho do container */
+.message {
+    max-width: 75%;
+    padding: 12px 15px;
+    border-radius: 15px;
+    font-size: 15px;
+    line-height: 1.4;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.message-bot {
+    align-self: flex-start;
+    background-color: #f0f0f0;
+    border-bottom-left-radius: 5px;
+}
+
+.message-user {
+    align-self: flex-end;
+    background-color: var(--color-purple);
+    color: white;
+    border-bottom-right-radius: 5px;
+}
+
+/* Chat Input */
+.chat-input {
+    padding: 15px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.chat-input input:focus {
+    border-color: var(--color-purple);
+}
+
+.chat-input button {
+    background: var(--color-purple);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.chat-input button:hover {
+    background: #6a0dad;
+}
+
+/* Scrollbar */
+.chat-messages::-webkit-scrollbar {
+    width: 5px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 5px;
+}

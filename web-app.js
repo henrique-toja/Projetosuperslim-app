@@ -5,19 +5,7 @@ let deferredPrompt;
 // Evento beforeinstallprompt para detectar a possibilidade de instalação do PWA
 window.addEventListener('beforeinstallprompt', (event) => {
 
-
-// Exibe o botão de instalação (com id="install")
-  const installSection = document.getElementById('install');
-
-// Adiciona o comportamento de clique ao botão de instalação
-  const installButton = document.getElementById('install');
-  if (installButton) {
-    installButton.addEventListener('click', () => {
-    
-// Mostra o prompt de instalação quando o botão é clicado
-      installPromptEvent.prompt();
-
-      // Aguarda a resposta do usuário (aceitar ou recusar a instalação)
+// Aguarda a resposta do usuário (aceitar ou recusar a instalação)
       installPromptEvent.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
           console.log('Usuário aceitou a instalação.');

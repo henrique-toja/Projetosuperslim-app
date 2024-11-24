@@ -45,3 +45,17 @@ if ('serviceWorker' in navigator) {
       console.error('Falha ao registrar o Service Worker:', error);
     });
 }
+
+  // Salva o evento para ser acionado manualmente mais tarde
+  installPromptEvent = event;
+
+  // Exibe o botão de instalação
+  const installButton = document.getElementById('install');
+  if (installButton) {
+    installButton.style.display = 'block'; // Garantir que o botão seja visível
+  }
+
+  // Adiciona o comportamento de clique ao botão de instalação
+  installButton.addEventListener('click', () => {
+    // Mostra o prompt de instalação quando o botão é clicado
+    installPromptEvent.prompt();

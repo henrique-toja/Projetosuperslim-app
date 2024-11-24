@@ -4,24 +4,20 @@ let deferredPrompt;
 
 // Evento beforeinstallprompt para detectar a possibilidade de instalação do PWA
 window.addEventListener('beforeinstallprompt', (event) => {
-  // Impede que o prompt padrão apareça
-  event.preventDefault();
 
-  // Salva o evento para ser acionado manualmente mais tarde
-  installPromptEvent = event;
-  deferredPrompt = event; // Para a segunda parte do código
 
-  // Exibe o botão de instalação (com id="install")
+// Exibe o botão de instalação (com id="install")
   const installSection = document.getElementById('install');
   if (installSection) {
     installSection.style.display = 'block';
   }
 
-  // Adiciona o comportamento de clique ao botão de instalação
+// Adiciona o comportamento de clique ao botão de instalação
   const installButton = document.getElementById('install');
   if (installButton) {
     installButton.addEventListener('click', () => {
-      // Mostra o prompt de instalação quando o botão é clicado
+    
+// Mostra o prompt de instalação quando o botão é clicado
       installPromptEvent.prompt();
 
       // Aguarda a resposta do usuário (aceitar ou recusar a instalação)
@@ -31,11 +27,6 @@ window.addEventListener('beforeinstallprompt', (event) => {
         } else {
           console.log('Usuário recusou a instalação.');
         }
-        // Após a escolha do usuário, o botão de instalação não é ocultado
-      });
-    });
-  }
-});
 
 // Bloquear o "pull-to-refresh" apenas no PWA
 document.addEventListener('touchmove', function(event) {

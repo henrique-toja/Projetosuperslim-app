@@ -8,9 +8,6 @@ window.addEventListener('beforeinstallprompt', (event) => {
 
 // Exibe o botão de instalação (com id="install")
   const installSection = document.getElementById('install');
-  if (installSection) {
-    installSection.style.display = 'block';
-  }
 
 // Adiciona o comportamento de clique ao botão de instalação
   const installButton = document.getElementById('install');

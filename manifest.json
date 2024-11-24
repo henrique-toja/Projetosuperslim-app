@@ -1,8 +1,7 @@
 {
   "name": "Projeto Super Slim",
-  "short_name": "Projeto Super Slim",
-  "description": "Transforme o emagrecimento em uma experiência leve e agradável com o Projeto Super Slim. Junte-se à nossa comunidade e atinja seus objetivos de forma saudável!",
-  "start_url": "/",
+  "short_name": "Super Slim",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#820ad1",

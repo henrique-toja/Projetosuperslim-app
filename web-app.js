@@ -9,28 +9,37 @@ window.addEventListener('beforeinstallprompt', (event) => {
   // Salva o evento para ser acionado manualmente mais tarde
   installPromptEvent = event;
 
-  // Seleciona o botão de instalação com a classe "install"
+  // Verifica se o app está no modo standalone
+  const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
+
+  // Seleciona o botão de instalação
   const installButton = document.querySelector('.install');
 
+  // Só exibe o botão se o app não estiver instalado (não em modo standalone)
   if (installButton) {
-    // Exibe o botão de instalação
-    installButton.style.display = 'block';
+    if (!isStandalone) {
+      // Exibe o botão de instalação
+      installButton.style.display = 'block';
 
-    // Adiciona o comportamento de clique ao botão de instalação
-    installButton.addEventListener('click', () => {
-      // Mostra o prompt de instalação quando o botão é clicado
-      installPromptEvent.prompt();
+      // Adiciona o comportamento de clique ao botão de instalação
+      installButton.addEventListener('click', () => {
+        // Mostra o prompt de instalação quando o botão é clicado
+        installPromptEvent.prompt();
 
-      // Aguarda a resposta do usuário (aceitar ou recusar a instalação)
-      installPromptEvent.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-          console.log('Usuário aceitou a instalação.');
-        } else {
-          console.log('Usuário recusou a instalação.');
-        }
-        // O botão continua visível após a resposta, sem ocultar
+        // Aguarda a resposta do usuário (aceitar ou recusar a instalação)
+        installPromptEvent.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('Usuário aceitou a instalação.');
+          } else {
+            console.log('Usuário recusou a instalação.');
+          }
+          // O botão continua visível após a resposta, sem ocultar
+        });
       });
-    });
+    } else {
+      // Se já estiver instalado (modo standalone), oculta o botão
+      installButton.style.display = 'none';
+    }
   }
 });
 

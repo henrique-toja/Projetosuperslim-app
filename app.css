@@ -323,3 +323,26 @@ button:hover, button:focus {
     color: var(--color-purple);
     margin-bottom: 0.5rem;
 }
+
+/* Container geral das tarefas */
+.tasks-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaçamento entre as seções */
+    justify-content: space-between;
+}
+
+/* Estilo para cada seção de tarefas */
+.task-section {
+    flex: 1 1 200px; /* Flexível, com largura mínima de 200px */
+    border: 1px solid #ccc; /* Bordas para demarcar cada seção */
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+/* Para garantir que as seções não fiquem muito pequenas em telas grandes */
+@media (min-width: 768px) {
+    .task-section {
+        flex: 1 1 250px; /* Ajusta a largura mínima em telas maiores */
+    }
+}

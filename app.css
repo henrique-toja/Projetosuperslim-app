@@ -324,7 +324,7 @@ button:hover, button:focus {
     margin-bottom: 0.5rem;
 }
 
-#install {
+.install {
     padding: 12px 24px;
     background-color: #0070c9;
     border-radius: 5px;
@@ -334,6 +334,6 @@ button:hover, button:focus {
     transition: background-color 0.3s;
 }
 
-#install:hover {
+.install:hover {
     background-color: #005ea7;
 }

@@ -1,7 +1,56 @@
+// Variável para armazenar o evento beforeinstallprompt
+let installPromptEvent;
+let deferredPrompt;
+
+// Evento beforeinstallprompt para detectar a possibilidade de instalação do PWA
+window.addEventListener('beforeinstallprompt', (event) => {
+  // Impede que o prompt padrão apareça
+  event.preventDefault();
+
+  // Salva o evento para ser acionado manualmente mais tarde
+  installPromptEvent = event;
+  deferredPrompt = event; // Para a segunda parte do código
+
+  // Exibe o botão de instalação (primeira parte)
+  const installSection = document.getElementById('install');
+  if (installSection) {
+    installSection.style.display = 'block';
+  }
+
+  // Adiciona o comportamento de clique ao botão de instalação
+  const installButton = document.getElementById('installButton');
+  if (installButton) {
+    installButton.addEventListener('click', () => {
+      // Mostra o prompt de instalação quando o botão é clicado
+      installPromptEvent.prompt();
+
+      // Aguarda a resposta do usuário (aceitar ou recusar a instalação)
+      installPromptEvent.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('Usuário aceitou a instalação.');
+        } else {
+          console.log('Usuário recusou a instalação.');
+        }
+        // Após a escolha do usuário, o botão de instalação é ocultado novamente
+        installSection.style.display = 'none';
+      });
+    });
+  }
+});
+
+// Para garantir que o botão de instalação só apareça para PWAs, você pode adicionar um fallback.
+window.addEventListener('appinstalled', () => {
+  console.log('O app foi instalado!');
+  const installSection = document.getElementById('install');
+  if (installSection) {
+    installSection.style.display = 'none';  // Esconde o botão se o app já foi instalado
+  }
+});
+
 // Bloquear o "pull-to-refresh" apenas no PWA
 document.addEventListener('touchmove', function(event) {
   const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
-  
+
   // Impedir o pull-to-refresh quando estiver no topo da página, mas apenas no PWA
   if (isStandalone && window.scrollY === 0 && event.touches[0].clientY > 0) {
     event.preventDefault(); // Bloqueia o refresh
@@ -19,11 +68,10 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-// Lógica para exibir o prompt de instalação do PWA
-let deferredPrompt;
+// Lógica para exibir o prompt de instalação do PWA (segunda parte)
 window.addEventListener('beforeinstallprompt', (e) => {
   console.log('beforeinstallprompt disparado');
-  
+
   // Prevenir o prompt padrão do navegador
   e.preventDefault();
   deferredPrompt = e;

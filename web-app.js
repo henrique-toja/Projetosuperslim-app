@@ -22,6 +22,8 @@ if ('serviceWorker' in navigator) {
 // Lógica para exibir o prompt de instalação do PWA
 let deferredPrompt;
 window.addEventListener('beforeinstallprompt', (e) => {
+  console.log('beforeinstallprompt disparado');
+  
   // Prevenir o prompt padrão do navegador
   e.preventDefault();
   deferredPrompt = e;

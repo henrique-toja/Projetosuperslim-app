@@ -29,6 +29,8 @@ html, body {
     margin: 0;
     display: flex;
     flex-direction: column;
+    overscroll-behavior: none;
+    touch-action: pan-x pan-y;
 }
 
 /* Garantir que o conteúdo principal fique entre o header e o footer */

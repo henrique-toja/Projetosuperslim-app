@@ -31,19 +31,9 @@ window.addEventListener('beforeinstallprompt', (event) => {
         } else {
           console.log('Usuário recusou a instalação.');
         }
-        // Após a escolha do usuário, o botão de instalação é ocultado novamente
-        installSection.style.display = 'none';
+        // Após a escolha do usuário, o botão de instalação não é ocultado
       });
     });
-  }
-});
-
-// Para garantir que o botão de instalação só apareça para PWAs, você pode adicionar um fallback.
-window.addEventListener('appinstalled', () => {
-  console.log('O app foi instalado!');
-  const installSection = document.getElementById('install');
-  if (installSection) {
-    installSection.style.display = 'none';  // Esconde o botão se o app já foi instalado
   }
 });
 

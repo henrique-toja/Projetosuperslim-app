@@ -1,7 +1,9 @@
-// Bloquear o "pull-to-refresh"
+// Bloquear o "pull-to-refresh" apenas no PWA
 document.addEventListener('touchmove', function(event) {
-  // Impedir o pull-to-refresh quando estiver no topo da página
-  if (window.scrollY === 0 && event.touches[0].clientY > 0) {
+  const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
+  
+  // Impedir o pull-to-refresh quando estiver no topo da página, mas apenas no PWA
+  if (isStandalone && window.scrollY === 0 && event.touches[0].clientY > 0) {
     event.preventDefault(); // Bloqueia o refresh
   }
 }, { passive: false });

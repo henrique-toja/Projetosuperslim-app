@@ -1,6 +1,6 @@
 {
-  "name": "Projeto Super Slim",
-  "short_name": "Super Slim",
+  "name": "Projeto Super Slim APP",
+  "short_name": "Projeto Super Slim WEB-APP",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",

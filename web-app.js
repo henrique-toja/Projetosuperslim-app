@@ -11,14 +11,14 @@ window.addEventListener('beforeinstallprompt', (event) => {
   installPromptEvent = event;
   deferredPrompt = event; // Para a segunda parte do código
 
-  // Exibe o botão de instalação (primeira parte)
+  // Exibe o botão de instalação (com id="install")
   const installSection = document.getElementById('install');
   if (installSection) {
     installSection.style.display = 'block';
   }
 
   // Adiciona o comportamento de clique ao botão de instalação
-  const installButton = document.getElementById('installButton');
+  const installButton = document.getElementById('install');
   if (installButton) {
     installButton.addEventListener('click', () => {
       // Mostra o prompt de instalação quando o botão é clicado
@@ -67,5 +67,3 @@ if ('serviceWorker' in navigator) {
       console.error('Falha ao registrar o Service Worker:', error);
     });
 }
-
-// Lógica para exibir o prompt de instalação do PWA (segundo bloco removido)

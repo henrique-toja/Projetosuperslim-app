@@ -1,6 +1,5 @@
-// Inicialização ao carregar a página
+// Evento que ocorre quando o DOM está totalmente carregado
 window.addEventListener('DOMContentLoaded', () => {
-    // Seleção dos elementos do DOM
     const messageInput = document.getElementById('message-input');
     const sendButton = document.getElementById('send-button');
     const chatMessages = document.getElementById('chat-messages');
@@ -57,49 +56,31 @@ async function sendMessage(messageInput, chatMessages) {
     chatMessages.appendChild(typingMessage);
     chatMessages.scrollTop = chatMessages.scrollHeight;
 
-    // Chama a função de obter resposta da API
+    // Chama a função de obter resposta do servidor
     const botResponse = await getBotResponse(message);
     typingMessage.remove(); // Remove a mensagem de "digitando"
     addMessage(botResponse, 'bot', chatMessages);
 }
 
-// Função para obter resposta da API
+// Função para obter resposta do servidor (que chama o OpenAI via API do servidor)
 async function getBotResponse(userMessage) {
-    const API_ENDPOINT = "https://models.inference.ai.azure.com/v1/chat/completions"; 
-    const API_KEY = API_GITHUB_TOKEN; // Substitua por sua chave real
-    const MODEL_NAME = "gpt-4o-mini";
-
     try {
-        const response = await fetch(API_ENDPOINT, {
-            method: "POST",
+        const response = await fetch('/api/chat', {
+            method: 'POST',
             headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${API_KEY}` // Autorização com a chave da API
+                'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-                model: MODEL_NAME,
-                messages: [
-                    { 
-                        role: "system", 
-                        content: 
-                            "Você é Gabi-GPT, a Assistente Oficial do Projeto Super Slim. " +
-                            "Seu papel é oferecer dicas personalizadas de exercícios para as participantes, " +
-                            "motivá-las e guiá-las em suas jornadas de emagrecimento. " +
-                            "Seja acolhedora, prestativa e motivadora em suas respostas."
-                    },
-                    { role: "user", content: userMessage }
-                ]
-            })
+            body: JSON.stringify({ message: userMessage }),
         });
 
         if (!response.ok) {
-            throw new Error(`Erro na API: ${response.statusText}`);
+            throw new Error('Erro na resposta da API');
         }
 
         const data = await response.json();
-        return data.choices[0].message.content; // Retorna a resposta do bot
+        return data.response; // Retorna a resposta da Gabi-GPT
     } catch (error) {
-        console.error("Erro ao obter resposta do bot:", error);
+        console.error('Erro ao obter resposta do bot:', error);
         return "Desculpe, ocorreu um problema ao tentar processar sua mensagem. Tente novamente mais tarde.";
     }
 }

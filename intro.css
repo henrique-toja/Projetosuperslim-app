@@ -77,8 +77,8 @@ body {
 
 .button.login {
   background-color: transparent;
-  color: var(--color-purple); /* Roxo para o texto do botão */
-  border: 2px solid var(--color-purple); /* Borda roxa */
+  color: var(--color-green); /* verde para o texto do botão */
+  border: 2px solid var(--color-green); /* Borda roxa */
 }
 
 .button.login:hover {

@@ -1,0 +1,62 @@
+body {
+  background: url('assets/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #FFFFFF;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(26, 26, 26, 0.7); /* Sobreposição semi-transparente */
+  backdrop-filter: blur(5px); /* Efeito de desfoque */
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+}
+
+.title {
+  font-size: 36px;
+  color: #820ad1; /* Cor roxa padrão */
+  margin: 10px 0;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #FFFFFF; /* Letras brancas */
+  margin-bottom: 40px;
+}
+
+.button {
+  width: 80%;
+  max-width: 300px;
+  padding: 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #FFFFFF; /* Letras brancas */
+}
+
+.button.start {
+  background-color: #A1E214; /* Verde */
+}
+
+.button.login {
+  background-color: transparent;
+  color: #A1E214; /* Verde */
+  border: 2px solid #A1E214; /* Borda verde */
+}

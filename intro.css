@@ -9,7 +9,7 @@ body {
   background: url('assets/background.jpg') no-repeat center center fixed;
   background-size: cover;
   color: var(--color-white);
-  font-family: 'Poppins', sans-serif; /* Fonte moderna e dinâmica */
+  font-family: 'Lobster', cursive; /* Fonte mais dinâmica e decorativa */
   text-align: center;
   margin: 0;
   padding: 0;
@@ -35,15 +35,15 @@ body {
 }
 
 .title {
-  font-size: 36px;
+  font-size: 42px; /* Aumentado para dar mais destaque */
   color: var(--color-green); /* Cor verde para o título */
   margin: 10px 0;
   font-weight: 700; /* Negrito para destaque */
-  text-shadow: 2px 2px 4px var(--color-black); /* Sombra no texto */
+  text-shadow: 3px 3px 6px var(--color-black); /* Sombra mais intensa */
 }
 
 .subtitle {
-  font-size: 16px;
+  font-size: 18px; /* Levemente maior */
   color: var(--color-white); /* Letras brancas */
   margin-bottom: 40px;
   font-weight: 300; /* Fonte mais leve */

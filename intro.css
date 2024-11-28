@@ -1,8 +1,15 @@
+:root {
+  --color-purple: #820ad1;
+  --color-green: #6aa84f;
+  --color-white: #ffffff;
+  --color-black: #000000;
+}
+
 body {
   background: url('assets/background.jpg') no-repeat center center fixed;
   background-size: cover;
-  color: #FFFFFF;
-  font-family: Arial, sans-serif;
+  color: var(--color-white);
+  font-family: 'Poppins', sans-serif; /* Fonte moderna e dinâmica */
   text-align: center;
   margin: 0;
   padding: 0;
@@ -29,14 +36,17 @@ body {
 
 .title {
   font-size: 36px;
-  color: #820ad1; /* Cor roxa padrão */
+  color: var(--color-green); /* Cor verde para o título */
   margin: 10px 0;
+  font-weight: 700; /* Negrito para destaque */
+  text-shadow: 2px 2px 4px var(--color-black); /* Sombra no texto */
 }
 
 .subtitle {
   font-size: 16px;
-  color: #FFFFFF; /* Letras brancas */
+  color: var(--color-white); /* Letras brancas */
   margin-bottom: 40px;
+  font-weight: 300; /* Fonte mais leve */
 }
 
 .button {
@@ -48,15 +58,30 @@ body {
   border-radius: 25px;
   font-size: 16px;
   cursor: pointer;
-  color: #FFFFFF; /* Letras brancas */
+  color: var(--color-white); /* Letras brancas */
+  font-weight: 500;
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Efeito de animação ao passar o mouse */
+}
+
+.button:hover {
+  transform: scale(1.05); /* Botão aumenta levemente no hover */
 }
 
 .button.start {
-  background-color: #A1E214; /* Verde */
+  background-color: var(--color-purple); /* Cor roxa para o botão */
+}
+
+.button.start:hover {
+  background-color: #5c0899; /* Roxo mais escuro no hover */
 }
 
 .button.login {
   background-color: transparent;
-  color: #A1E214; /* Verde */
-  border: 2px solid #A1E214; /* Borda verde */
+  color: var(--color-purple); /* Roxo para o texto do botão */
+  border: 2px solid var(--color-purple); /* Borda roxa */
+}
+
+.button.login:hover {
+  background-color: var(--color-purple); /* Fundo roxo no hover */
+  color: var(--color-white); /* Texto branco no hover */
 }

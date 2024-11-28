@@ -3,13 +3,17 @@
   --color-green: #6aa84f;
   --color-white: #ffffff;
   --color-black: #000000;
+
+  --font-family-title: 'Lobster', cursive; /* Fonte decorativa para o título */
+  --font-family-h3: 'Playfair Display', 'Georgia', serif; /* Fonte para subtítulos */
+  --font-family-button: 'Roboto', 'Segoe UI', sans-serif; /* Fonte para os botões */
 }
 
 body {
   background: url('assets/background.jpg') no-repeat center center fixed;
   background-size: cover;
   color: var(--color-white);
-  font-family: 'Lobster', cursive; /* Fonte mais dinâmica e decorativa */
+  font-family: var(--font-family-title);
   text-align: center;
   margin: 0;
   padding: 0;
@@ -43,13 +47,14 @@ body {
 }
 
 .subtitle {
-  font-size: 18px; /* Levemente maior */
+  font-family: var(--font-family-h3); /* Fonte personalizada para h3 */
+  font-size: 24px; /* Ajustado para maior legibilidade */
   color: var(--color-white); /* Letras brancas */
   margin-bottom: 40px;
   font-weight: 300; /* Fonte mais leve */
 }
 
-.button {
+button {
   width: 80%;
   max-width: 300px;
   padding: 15px;
@@ -58,30 +63,31 @@ body {
   border-radius: 25px;
   font-size: 16px;
   cursor: pointer;
-  color: var(--color-white); /* Letras brancas */
+  font-family: var(--font-family-button); /* Fonte personalizada para botões */
   font-weight: 500;
   transition: transform 0.3s ease, background-color 0.3s ease; /* Efeito de animação ao passar o mouse */
 }
 
-.button:hover {
+button:hover {
   transform: scale(1.05); /* Botão aumenta levemente no hover */
 }
 
-.button.start {
+button.start {
   background-color: var(--color-purple); /* Cor roxa para o botão */
+  color: var(--color-white); /* Letras brancas */
 }
 
-.button.start:hover {
+button.start:hover {
   background-color: #5c0899; /* Roxo mais escuro no hover */
 }
 
-.button.login {
+button.login {
   background-color: transparent;
-  color: var(--color-purple); /* verde para o texto do botão */
+  color: var(--color-purple); /* Roxo para o texto do botão */
   border: 2px solid var(--color-purple); /* Borda roxa */
 }
 
-.button.login:hover {
-  background-color: var(--color-green); /* Fundo roxo no hover */
+button.login:hover {
+  background-color: var(--color-green); /* Fundo verde no hover */
   color: var(--color-white); /* Texto branco no hover */
 }

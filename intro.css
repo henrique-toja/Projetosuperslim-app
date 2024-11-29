@@ -43,7 +43,7 @@ body {
   font-size: 42px; /* Aumentado para dar mais destaque */
   color: var(--color-green); /* Cor verde para o título */
   margin: 10px 0;
-  font-family: var(--font-family-tittle); /* Fonte personalizada para titulo
+  font-family: var(--font-family-title); /* Fonte personalizada para titulo
   font-weight: 700; /* Negrito para destaque */
   text-shadow: 3px 3px 6px var(--color-black); /* Sombra mais intensa */
 }

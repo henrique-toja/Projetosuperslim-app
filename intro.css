@@ -4,8 +4,9 @@
   --color-white: #ffffff;
   --color-black: #000000;
 
-  --font-family-title: 'Lobster', cursive; /* Fonte decorativa para o título */
+  --font-family-title: cursive;
   --font-family-h3: 'Playfair Display', 'Georgia', serif; /* Fonte para subtítulos */
+  --font-family-body: 'Open Sans', 'Noto Sans', 'Helvetica Neue', sans-serif;
   --font-family-button: 'Roboto', 'Segoe UI', sans-serif; /* Fonte para os botões */
 }
 
@@ -13,7 +14,7 @@ body {
   background: url('assets/background.jpg') no-repeat center center fixed;
   background-size: cover;
   color: var(--color-white);
-  font-family: var(--font-family-title);
+  font-family: var(--font-family-body);
   text-align: center;
   margin: 0;
   padding: 0;

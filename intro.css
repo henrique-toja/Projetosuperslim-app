@@ -91,3 +91,52 @@ button.login:hover {
   background-color: var(--color-green); /* Fundo verde no hover */
   color: var(--color-white); /* Texto branco no hover */
 }
+
+        }
+        .back-arrow {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            color: #4a5a65;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+        }
+        .speech-bubble {
+            background-color: #1e2a32;
+            border: 2px solid #4a5a65;
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            position: relative;
+            font-size: 18px;
+        }
+        .speech-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 10px;
+            border-style: solid;
+            border-color: #1e2a32 transparent transparent transparent;
+        }
+        .gabi-image {
+            width: 100px;
+            height: 100px;
+        }
+        .start {
+            background-color: #a1e214;
+            color: #1e2a32;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            font-size: 18px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }

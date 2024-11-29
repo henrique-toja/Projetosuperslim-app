@@ -29,31 +29,6 @@ body {
   backdrop-filter: blur(5px); /* Efeito de desfoque */
 }
 
-.logo {
-  margin-bottom: 20px;
-}
-
-.logo img {
-  width: 150px;
-  height: auto;
-}
-
-.title {
-  font-size: 42px; /* Aumentado para dar mais destaque */
-  color: var(--color-green); /* Cor verde para o título */
-  margin: 10px 0;
-  font-weight: 700; /* Negrito para destaque */
-  text-shadow: 3px 3px 6px var(--color-black); /* Sombra mais intensa */
-}
-
-.subtitle {
-  font-family: var(--font-family-h3); /* Fonte personalizada para h3 */
-  font-size: 18px; /* Ajustado para maior legibilidade */
-  color: var(--color-white); /* Letras brancas */
-  margin-bottom: 30px;
-  font-weight: 100; /* Fonte mais leve */
-}
-
 button {
   width: 80%;
   max-width: 300px;
@@ -63,80 +38,70 @@ button {
   border-radius: 25px;
   font-size: 16px;
   cursor: pointer;
-  font-family: var(--font-family-button); /* Fonte personalizada para botões */
+  font-family: var(--font-family-button);
   font-weight: 500;
-  transition: transform 0.3s ease, background-color 0.3s ease; /* Efeito de animação ao passar o mouse */
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 button:hover {
-  transform: scale(1.05); /* Botão aumenta levemente no hover */
+  transform: scale(1.05);
 }
 
 button.start {
-  background-color: var(--color-purple); /* Cor roxa para o botão */
-  color: var(--color-white); /* Letras brancas */
+  background-color: var(--color-purple);
+  color: var(--color-white);
 }
 
 button.start:hover {
-  background-color: #5c0899; /* Roxo mais escuro no hover */
+  background-color: #5c0899;
 }
 
 button.login {
   background-color: transparent;
-  color: var(--color-purple); /* Roxo para o texto do botão */
-  border: 2px solid var(--color-purple); /* Borda roxa */
+  color: var(--color-purple);
+  border: 2px solid var(--color-purple);
 }
 
 button.login:hover {
-  background-color: var(--color-green); /* Fundo verde no hover */
-  color: var(--color-white); /* Texto branco no hover */
+  background-color: var(--color-green);
+  color: var(--color-white);
 }
 
-        }
-        .back-arrow {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 24px;
-            color: #4a5a65;
-        }
-        .content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            flex-grow: 1;
-        }
-        .speech-bubble {
-            background-color: #1e2a32;
-            border: 2px solid #4a5a65;
-            border-radius: 10px;
-            padding: 10px 20px;
-            margin-bottom: 20px;
-            position: relative;
-            font-size: 18px;
-        }
-        .speech-bubble::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            border-width: 10px;
-            border-style: solid;
-            border-color: #1e2a32 transparent transparent transparent;
-        }
-        .gabi-image {
-            width: 100px;
-            height: 100px;
-        }
-        .start {
-            background-color: #a1e214;
-            color: #1e2a32;
-            border: none;
-            border-radius: 5px;
-            padding: 15px 30px;
-            font-size: 18px;
-            margin-bottom: 20px;
-            cursor: pointer;
-        }
+.speech img {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.speech-bubble {
+  background-color: #1e2a32;
+  border: 2px solid #4a5a65;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  position: relative;
+  font-size: 18px;
+  color: var(--color-white);
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: #1e2a32 transparent transparent transparent;
+}
+
+.back-arrow {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  color: var(--color-black);
+  background: none;
+  border: none;
+  cursor: pointer;
+}

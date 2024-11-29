@@ -48,10 +48,10 @@ body {
 
 .subtitle {
   font-family: var(--font-family-h3); /* Fonte personalizada para h3 */
-  font-size: 24px; /* Ajustado para maior legibilidade */
+  font-size: 18px; /* Ajustado para maior legibilidade */
   color: var(--color-white); /* Letras brancas */
-  margin-bottom: 40px;
-  font-weight: 300; /* Fonte mais leve */
+  margin-bottom: 30px;
+  font-weight: 100; /* Fonte mais leve */
 }
 
 button {

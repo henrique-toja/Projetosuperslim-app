@@ -1,119 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- Metadados básicos -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#820ad1">
   <meta name="description" content="Aplicativo oficial do Projeto Super Slim">
-
-  <!-- Título da página -->
   <title>Projeto Super Slim App</title>
-
-  <!-- Ícones -->
   <link rel="icon" href="assets/icon.ico" type="image/x-icon">
-  <link rel="icon" href="assets/icon-192x192.png">
-
-  <!-- Manifesto para PWA -->
-  <link rel="manifest" href="manifest.json">
-
-  <!-- Metadados para redes sociais (Open Graph) -->
-  <meta property="og:title" content="Projeto Super Slim App">
-  <meta property="og:description" content="Aplicativo oficial do Projeto Super Slim">
-  <meta property="og:image" content="https://www.projetosuperslim.fitness/assets/tag.jpg">
-  <meta property="og:url" content="https://www.projetosuperslim.fitness">
-  <meta property="og:type" content="website">
-
-  <!-- Metadados para Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Projeto Super Slim">
-  <meta name="twitter:description" content="Aplicativo oficial do Projeto Super Slim">
-  <meta name="twitter:image" content="https://www.projetosuperslim.fitness/assets/tag.jpg">
-
-  <!-- Link para Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-
-  <!-- Arquivos de estilo -->
   <link rel="stylesheet" href="intro.css">
 </head>
 <body>
-  <style>
-   body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            height: 100vh;
-            background-color: #1e2a32;
-            font-family: Arial, sans-serif;
-            color: #ffffff;
-        }
-        .back-arrow {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 24px;
-            color: #4a5a65;
-        }
-        .content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            flex-grow: 1;
-        }
-        .speech-bubble {
-            background-color: #1e2a32;
-            border: 2px solid #4a5a65;
-            border-radius: 10px;
-            padding: 10px 20px;
-            margin-bottom: 20px;
-            position: relative;
-            font-size: 18px;
-        }
-        .speech-bubble::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            border-width: 10px;
-            border-style: solid;
-            border-color: #1e2a32 transparent transparent transparent;
-        }
-        .gabi-image {
-            width: 100px;
-            height: 100px;
-        }
-        .start {
-            background-color: #a1e214;
-            color: #1e2a32;
-            border: none;
-            border-radius: 5px;
-            padding: 15px 30px;
-            font-size: 18px;
-            margin-bottom: 20px;
-            cursor: pointer;
-        }
-  </style>
- </head>
- <body>
-  <button class="back-arrow">
+  <!-- Botão de voltar -->
+  <button class="back-arrow" onclick="window.location.href='/'">
+    Voltar
   </button>
+
+  <!-- Balão de fala com imagem -->
   <div class="speech">
-   <div class="speech-bubble">
-    Oii, eu sou a Gabi-GPT 🥰 Vamos começar seu projeto de emagrecimento? 💪
-   </div>
-   <img alt="gabi-image" src="assets/gabi-gpt-exercicios" width="100"/>
+    <div class="speech-bubble">
+      Oii, eu sou a Gabi-GPT 🥰 Vamos começar seu projeto de emagrecimento? 💪
+    </div>
+    <img alt="gabi-image" src="assets/gabi-gpt-exercicios" width="100">
   </div>
-  <button class="start">
-   Começar
+
+  <!-- Botão de começar -->
+  <button class="start" onclick="window.location.href='intro3.html'">
+    Começar
   </button>
- </body>
-</html>
-  <!-- Link para o arquivo JavaScript -->
+
   <script src="web-app.js"></script>
 </body>
 </html>

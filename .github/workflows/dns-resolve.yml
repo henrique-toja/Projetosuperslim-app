@@ -1,0 +1,14 @@
+name: Resolve DNS
+
+on:
+  workflow_dispatch: # Permite executar manualmente no GitHub Actions
+
+jobs:
+  resolve-dns:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Resolve IP da URL
+      run: |
+        echo "Resolvendo IP para https://www.gabrielatorraca.com.br"
+        host www.gabrielatorraca.com.br | grep "has address" || echo "Não foi possível resolver o IP"
